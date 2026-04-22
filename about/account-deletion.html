@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Account Deletion - Karta Polaka</title>
+    <style>
+        :root {
+            --b: #f7f7f5;
+            --t: #1a1a1a;
+            --s: #595959;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --b: #0f0f10;
+                --t: #e8e8e6;
+                --s: #a1a1a1;
+            }
+        }
+
+        * { box-sizing: border-box; margin: 0; }
+
+        body {
+            min-height: 100vh;
+            background: var(--b);
+            color: var(--t);
+            font: 1rem/1.6 system-ui;
+        }
+
+        main {
+            max-width: 760px;
+            margin: auto;
+            padding: 5rem 2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* Accordion Logic (Pure CSS) */
+        .tab {
+            width: 100%;
+            color: var(--t);
+            overflow: hidden;
+            border-top: 1px solid var(--s);
+        }
+
+        .tab:last-child {
+            border-bottom: 1px solid var(--s);
+        }
+
+        /* Скрываем радиокнопку */
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        /* Стили заголовка (Label) */
+        .tab-label {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 0;
+            font-size: .8rem;
+            font-weight: bold;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .tab-label::after {
+            content: "\276F";
+            width: 1em;
+            height: 1em;
+            text-align: center;
+            transition: all .35s;
+        }
+
+        /* Контент вкладки */
+        .tab-content {
+            max-height: 0;
+            padding: 0;
+            transition: all .35s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .tab-content hr {
+            width: 48px;
+            height: 1px;
+            border: 0;
+            background: var(--s);
+            margin: 1rem 0;
+        }
+
+        .tab-content ul {
+            padding-left: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .tab-content li { margin-bottom: 0.5rem; }
+
+        /* Логика открытия через :checked */
+        input:checked ~ .tab-content {
+            max-height: 100vh; /* Высота подстроится под контент */
+            padding-bottom: 2rem;
+        }
+
+        input:checked ~ .tab-label::after {
+            transform: rotate(90deg);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid var(--s);
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <h1>Account & Data Deletion</h1>
+
+    <div class="tabs">
+
+        <div class="tab">
+            <input type="radio" name="rd" id="rd1">
+            <label class="tab-label" for="rd1">English</label>
+            <div class="tab-content">
+                <hr>
+                <p>You have the right to request the deletion of your account and associated data. You can do this in two ways:</p>
+                <ul>
+                    <li><strong>In the App:</strong> Go to the <strong>"Settings"</strong> tab, log in, and select <strong>"Delete Account"</strong>.</li>
+                    <li><strong>Via Email:</strong> Contact us at <a href="mailto:karta.polaka.info@gmail.com">karta.polaka.info@gmail.com</a>. We will process your request within 30 days.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab">
+            <input type="radio" name="rd" id="rd2" checked>
+            <label class="tab-label" for="rd2">Русский</label>
+            <div class="tab-content">
+                <hr>
+                <p>Вы имеете право запросить удаление своего аккаунта и связанных с ним данных. Это можно сделать двумя способами:</p>
+                <ul>
+                    <li><strong>В приложении:</strong> Вкладка <strong>«Настройки»</strong> > Авторизация > <strong>«Удалить аккаунт»</strong>.</li>
+                    <li><strong>Email:</strong> Напишите нам на <a href="mailto:karta.polaka.info@gmail.com">karta.polaka.info@gmail.com</a>. Данные будут удалены в течение 30 дней.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab">
+            <input type="radio" name="rd" id="rd3">
+            <label class="tab-label" for="rd3">Polski</label>
+            <div class="tab-content">
+                <hr>
+                <p>Masz prawo zażądać usunięcia swojego konta i powiązanych z nim danych. Możesz to zrobić na dwa sposoby:</p>
+                <ul>
+                    <li><strong>W aplikacji:</strong> Karta <strong>„Ustawienia”</strong> > Zaloguj się > <strong>„Usuń konto”</strong>.</li>
+                    <li><strong>E-mail:</strong> Napisz do nas na <a href="mailto:karta.polaka.info@gmail.com">karta.polaka.info@gmail.com</a>. Usuniemy dane w ciągu 30 dni.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+</body>
+</html>
