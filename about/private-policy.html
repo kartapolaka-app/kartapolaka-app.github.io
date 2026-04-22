@@ -3,13 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Account Deletion - Karta Polaka</title>
+    <title>Privacy Policy - Karta Polaka</title>
     <style>
         :root {
             --b: #f7f7f5;
             --t: #1a1a1a;
             --s: #595959;
         }
+
         @media (prefers-color-scheme: dark) {
             :root {
                 --b: #0f0f10;
@@ -17,82 +18,264 @@
                 --s: #a1a1a1;
             }
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0
+        }
+
         body {
             min-height: 100vh;
             background: var(--b);
             color: var(--t);
-            font: 1rem/1.6 system-ui, -apple-system, sans-serif;
+            font: 1rem/1.6 system-ui;
+            transition: background .3s, color .3s;
         }
+
         main {
             max-width: 760px;
             margin: auto;
             padding: 5rem 2rem;
         }
+
+        main > * + * {
+            margin-top: 3.2rem
+        }
+
+        hr {
+            width: 48px;
+            height: 1px;
+            border: 0;
+            background: var(--s);
+            margin: 1.5rem 0;
+        }
+
         h1 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            text-align: center;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
         }
-        .tab {
-            width: 100%;
-            border-top: 1px solid var(--s);
-            overflow: hidden;
-        }
-        .tab:last-child { border-bottom: 1px solid var(--s); }
-        input[type="checkbox"] {
-            position: absolute;
-            opacity: 0;
-            z-index: -1;
-        }
-        .tab-label {
-            display: flex;
-            justify-content: space-between;
-            padding: 1.5rem 0;
+
+        h2 {
             font-size: .8rem;
-            font-weight: bold;
             letter-spacing: .1em;
             text-transform: uppercase;
-            cursor: pointer;
+            color: var(--s);
+            margin-bottom: 1.25rem
         }
-        .tab-label::after {
-            content: "\276F";
-            transition: all .35s;
-        }
-        .tab-content {
-            max-height: 0;
-            transition: all .35s;
-            overflow: hidden;
-        }
-        input:checked ~ .tab-content {
-            max-height: 500px;
+
+        .lang-section {
+            border-bottom: 1px solid var(--s);
             padding-bottom: 2rem;
+            margin-bottom: 4rem;
         }
-        input:checked ~ .tab-label::after {
-            transform: rotate(90deg);
+
+        .lang-section:last-child {
+            border-bottom: none;
         }
-        a { color: inherit; border-bottom: 1px solid var(--s); text-decoration: none; }
+
+        header p {
+            font-size: .8rem;
+            color: var(--s);
+            text-transform: uppercase;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid var(--s);
+            transition: border-color .2s;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body>
 <main>
-    <h1>Account & Data Deletion</h1>
-    <div class="tabs">
-        <div class="tab">
-            <input type="checkbox" id="chck1">
-            <label class="tab-label" for="chck1">English</label>
-            <div class="tab-content">
-                <p>You can request deletion via email: <a href="mailto:karta.polaka.info@gmail.com">karta.polaka.info@gmail.com</a></p>
-            </div>
+
+    <section class="lang-section">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p>Last updated: March 11, 2024</p>
+        </header>
+
+        <div>
+            <h2>Introduction</h2>
+            <hr>
+            <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your
+                information when You use the Service and tells You about Your privacy rights and how the law protects
+                You.</p>
+            <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the
+                collection and use of information in accordance with this Privacy Policy.</p>
         </div>
-        <div class="tab">
-            <input type="checkbox" id="chck2">
-            <label class="tab-label" for="chck2">Русский</label>
-            <div class="tab-content">
-                <p>Удаление через почту: <a href="mailto:karta.polaka.info@gmail.com">karta.polaka.info@gmail.com</a></p>
-            </div>
+
+        <div>
+            <h2>Definitions</h2>
+            <hr>
+            <ul>
+                <li><strong>Application:</strong> means the software program provided by the Company downloaded on any
+                    electronic device, named <strong>Karta Polaka</strong>.
+                </li>
+                <li><strong>Company:</strong> (referred to as "the Company", "We", "Us" or "Our") refers to Karta
+                    Polaka.
+                </li>
+                <li><strong>Personal Data:</strong> is any information that relates to an identified or identifiable
+                    individual.
+                </li>
+            </ul>
         </div>
-    </div>
+
+        <div>
+            <h2>Types of Data Collected</h2>
+            <hr>
+            <p>While using Our Service, We may collect certain personally identifiable information, including but not
+                limited to:</p>
+            <ul>
+                <li>Device information (device model, operating system)</li>
+                <li>Usage information (features used, time spent)</li>
+                <li>Crash reports and error logs</li>
+                <li>Application performance data</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Use of Your Personal Data</h2>
+            <hr>
+            <p>The Company may use Personal Data for the following purposes:</p>
+            <ul>
+                <li>To provide and maintain our Application</li>
+                <li>To notify you about changes to our Application</li>
+                <li>To improve and optimize the performance of our Application</li>
+                <li>To understand and analyze how you use our Application</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Contact</h2>
+            <hr>
+            <p>If you have any questions, contact us: <a href="mailto:karta.polaka.info@gmail.com">karta.polaka.info@gmail.com</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="lang-section">
+        <header>
+            <h1>Политика конфиденциальности</h1>
+            <p>Последнее обновление: 11 марта 2024 г.</p>
+        </header>
+
+        <div>
+            <h2>Введение</h2>
+            <hr>
+            <p>Данная Политика конфиденциальности описывает наши правила и процедуры по сбору, использованию и
+                разглашению Вашей информации при использовании Сервиса, а также информирует Вас о Ваших правах на
+                конфиденциальность и о том, как закон защищает Вас.</p>
+            <p>Мы используем Ваши персональные данные для предоставления и улучшения Сервиса. Используя Сервис, Вы
+                соглашаетесь на сбор и использование информации в соответствии с настоящей Политикой.</p>
+        </div>
+
+        <div>
+            <h2>Определения</h2>
+            <hr>
+            <ul>
+                <li><strong>Приложение:</strong> означает программное обеспечение, предоставленное Компанией и
+                    загруженное на любое электронное устройство, под названием <strong>Karta Polaka</strong>.
+                </li>
+                <li><strong>Компания:</strong> (именуемая в данном Соглашении как «Компания», «Мы», «Нас» или «Наш»)
+                    относится к Karta Polaka.
+                </li>
+                <li><strong>Персональные данные:</strong> любая информация, относящаяся к идентифицированному или
+                    идентифицируемому физическому лицу.
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Типы собираемых данных</h2>
+            <hr>
+            <p>При использовании нашего Сервиса мы можем собирать определенную личную информацию, включая, помимо
+                прочего:</p>
+            <ul>
+                <li>Информация об устройстве (модель, операционная система)</li>
+                <li>Данные об использовании (используемые функции, время в приложении)</li>
+                <li>Отчеты о сбоях и логи ошибок</li>
+                <li>Данные о производительности приложения</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Контактная информация</h2>
+            <hr>
+            <p>Если у вас есть вопросы, свяжитесь с нами: <a href="mailto:karta.polaka.info@gmail.com">karta.polaka.info@gmail.com</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="lang-section">
+        <header>
+            <h1>Polityka Prywatności</h1>
+            <p>Ostatnia aktualizacja: 11 marca 2024 r.</p>
+        </header>
+
+        <div>
+            <h2>Wstęp</h2>
+            <hr>
+            <p>Niniejsza Polityka Prywatności opisuje nasze zasady i procedury dotyczące gromadzenia, wykorzystywania i
+                ujawniania informacji o użytkowniku podczas korzystania z Usługi oraz informuje o prawach do prywatności
+                i o tym, jak prawo chroni użytkownika.</p>
+            <p>Wykorzystujemy dane osobowe użytkownika w celu świadczenia i ulepszania Usługi. Korzystając z Usługi,
+                użytkownik wyraża zgodę na gromadzenie i wykorzystywanie informacji zgodnie z niniejszą Polityką
+                Prywatności.</p>
+        </div>
+
+        <div>
+            <h2>Definicje</h2>
+            <hr>
+            <ul>
+                <li><strong>Aplikacja:</strong> oznacza oprogramowanie dostarczone przez Firmę, pobrane na dowolne
+                    urządzenie elektroniczne, o nazwie <strong>Karta Polaka</strong>.
+                </li>
+                <li><strong>Firma:</strong> (określana w niniejszej Umowie jako „Firma”, „My”, „Nas” lub „Nasze”) odnosi
+                    się do Karta Polaka.
+                </li>
+                <li><strong>Dane Osobowe:</strong> to wszelkie informacje dotyczące zidentyfikowanej lub możliwej do
+                    zidentyfikowania osoby fizycznej.
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Rodzaje gromadzonych danych</h2>
+            <hr>
+            <p>Podczas korzystania z naszej Usługi możemy gromadzić pewne informacje umożliwiające identyfikację, w tym
+                między innymi:</p>
+            <ul>
+                <li>Informacje o urządzeniu (model urządzenia, system operacyjny)</li>
+                <li>Informacje o użytkowaniu (używane funkcje, spędzony czas)</li>
+                <li>Raporty o błędach i logi systemowe</li>
+                <li>Dane o wydajności aplikacji</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Kontakt</h2>
+            <hr>
+            <p>W razie pytań prosimy o kontakt: <a
+                    href="mailto:karta.polaka.info@gmail.com">karta.polaka.info@gmail.com</a></p>
+        </div>
+    </section>
+
 </main>
 </body>
 </html>
